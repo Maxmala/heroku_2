@@ -1,0 +1,13 @@
+<h1>Balance ton nouveau GOSSIP</h1>
+
+<%= form_for @gossip do |f| %>
+
+<%= f.label "Entre ton pseudo" %></br>
+<%= f.text_field :anonymous_author  %>
+</br></br>
+<%= f.label "Vas-y lache toi" %></br>
+<%=f.text_area :content , size:"80*60" %>
+</br></br>
+<%=f.submit "Balance ton gossip" %>
+</div>
+<% end %>

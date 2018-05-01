@@ -1,0 +1,22 @@
+<div class="center jumbotron">
+<h1><%= @gossip.anonymous_author%> à publié ce super potin !</h1></br>
+<h4>Voici sa contribution a ce site torchon: </h4>
+</br>
+<br>
+
+<%= @gossip.content %>
+<br>
+<br>
+</div>
+<%= link_to 'Clique modifier', edit_gossip_path , :class => "btn btn-primary" %>
+<br>
+<br>
+<%= link_to 'Clique pour détruire', @gossip, method: :delete, :class => "btn btn-danger", :data => {:confirm => "Es-tu sûr de vouloir supprimer ce Potin ?"} %>
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+<h1> Les Potins </h1>
+<table class="table">
+	<thead>
+		<tr>
+			<td>Id</td>
+			<td>Pseudo</td>
+			<td>Potins</td>
+			<td>Lire</td>
+			<td>Modifier</td>
+			<td>Suprimmer</td>
+		</tr>
+	</thead>
+	<tbody>
+		<% @gossips.each do |gossip|%>
+
+		<tr>
+			<td><%= gossip.id %></td>
+			<td><%= gossip.anonymous_author %></td>
+			<td><%= gossip.content %></td>
+			<td><a href="<%=gossip_page_path(gossip.id) %>" class= "btn btn-default">Lire en entier</td></td>
+			<td><a href="<%=edit_gossip_path(gossip.id) %>" class= "btn btn-primary">Modifier</a></td>
+			<td><%= link_to 'Clique pour détruire',gossip, method: :delete, :class => "btn btn-danger", :data => {:confirm => "Es-tu sûr de vouloir supprimer ce Potin ?"} %></td>
+			
+
+
+		</tr>
+
+<% end %>
+
+
+
+
+	</tbody>
+
+
+
+
+
+
+
+
+
+
+
+	</table>
